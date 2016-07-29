@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
@@ -186,7 +186,7 @@
             <objects>
                 <controller title="About" id="2el-6y-EOr">
                     <items>
-                        <imageView width="76" height="75" alignment="center" image="guitar-icon_orange_2.png" id="Ulo-jp-92C">
+                        <imageView width="76" height="75" alignment="center" image="guitar-icon_new_app.png" id="Ulo-jp-92C">
                             <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </imageView>
                         <label width="136" alignment="left" text="GuitarHelper App Created by Pryadchenko Ivan Danya Vorobyev Alexander Lebedev iOS Track        Summer School HSE 2016" textAlignment="center" numberOfLines="8" id="tle-8i-Zfi">
@@ -194,6 +194,9 @@
                             <fontDescription key="font" type="system" pointSize="14"/>
                         </label>
                     </items>
+                    <connections>
+                        <outlet property="imageGroup" destination="Ulo-jp-92C" id="qFQ-PY-6cX"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="765" y="-275"/>

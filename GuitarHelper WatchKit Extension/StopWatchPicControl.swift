@@ -31,13 +31,18 @@ class StopWatchPicControl: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         if let newContext = context{
-            songIndex = newContext as! Int
+            songIndex = newContext as? Int
         }
         valueTempDefault = myDict![String(songIndex!)]![kBeatRateLinePList]! as! Double
-        valueTempCalculated = valueTempDefault/Double(vSpeedMetronomeValue)
-        if valueTempCalculated < 0.5 || valueTempCalculated > 4 {
+        if let speed = vSpeedMetronomeValue {
+            valueTempCalculated = valueTempDefault/Double(speed)
+        } else {
             valueTempCalculated = 1
         }
+        if  valueTempCalculated > 208 {
+            valueTempCalculated = 1
+        }
+        
         var chord = myDict![String(songIndex!)]![kChordArrayLinePList]!![String(0)]!!
         var chordValue: String = chord[kChordLinePList] as! String
         let image : UIImage = UIImage(named: chordValue)!

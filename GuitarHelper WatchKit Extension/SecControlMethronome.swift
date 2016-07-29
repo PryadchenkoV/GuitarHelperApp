@@ -10,7 +10,8 @@ import WatchKit
 import Foundation
 
 var vFlagMetronom = false
-var vSpeedMetronomeValue = 0
+var vSpeedMetronomeValue: Int?
+var vSpeedMetronomeBuf: Int?
 
 let kBeatRateLinePList = "BPM"
 
@@ -25,6 +26,7 @@ class SecControlMethronome: WKInterfaceController {
             myPicker.setEnabled(true)
             myPicker.setAlpha(1)
             vFlagMetronom = true
+            vSpeedMetronomeValue = vSpeedMetronomeBuf
             
             
         }
@@ -32,7 +34,7 @@ class SecControlMethronome: WKInterfaceController {
             myPicker.setEnabled(false)
             myPicker.setAlpha(0)
             vFlagMetronom = false
-            vSpeedMetronomeValue = 0
+            vSpeedMetronomeValue = nil
         }
 
     }
@@ -59,6 +61,7 @@ class SecControlMethronome: WKInterfaceController {
     
     @IBAction func pickerAction(value: Int) {
         vSpeedMetronomeValue = value + 10
+        vSpeedMetronomeBuf = vSpeedMetronomeValue
     }
 
     override func willActivate() {

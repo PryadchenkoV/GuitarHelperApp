@@ -48,15 +48,18 @@ class StopWatchControl: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         if let newContext = context{
-            songIndex = newContext as! Int
+            songIndex = newContext as? Int
         }
         valueTempDefault = myDict![String(songIndex!)]![kBeatRateLinePList]! as! Double
-        valueTempCalculated = valueTempDefault/Double(vSpeedMetronomeValue)
-        if valueTempCalculated < 0.5 || valueTempCalculated > 208 {
+        if let speed = vSpeedMetronomeValue {
+            valueTempCalculated = valueTempDefault/Double(speed)
+        } else {
             valueTempCalculated = 1
         }
-        print(valueTempCalculated)
-        lableNextAcc.setText("\(String(format: "%.2f", valueTempCalculated!))x")
+        if  valueTempCalculated > 208 {
+            valueTempCalculated = 1
+        }
+        lableNextAcc.setText("\(String(format: "%.2f", Double(vSpeedMetronomeValue!)/valueTempDefault))x")
         lableCountDown.setText("")
         countDownToStart()
     }
