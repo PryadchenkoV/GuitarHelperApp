@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarHelper WatchKit Extension/StopWatchControl.swift"
-            timestampString = "490105644.130091"
+            timestampString = "491523014.398315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "awakeWithContext(_:)"
             landmarkType = "5">
          </BreakpointContent>
