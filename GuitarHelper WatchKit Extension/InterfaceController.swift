@@ -35,7 +35,7 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         if let newContext = context{
-            chooseSongIndex = newContext as! Int
+            chooseSongIndex = newContext as? Int
         }
         loadTableData()
     }
@@ -50,7 +50,7 @@ class InterfaceController: WKInterfaceController {
     }
     func showPopup(value: Int) -> Bool {
         
-        let action1 = WKAlertAction(title: "Year!", style: .Default) { () -> Void in
+        let action1 = WKAlertAction(title: "Yeah!", style: .Default) { () -> Void in
             self.presentControllerWithName("chordsChange\(value)", context: chooseSongIndex)
         }
         
@@ -73,7 +73,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func buttonListenPush() {
         
         //let urls = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(nameS[chooseSongIndex!], ofType: "mp3")!)
-        let urls = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource((myDict![String(chooseSongIndex!)]![kAudioFileNameLinePList]!)! as! String, ofType: "mp3")!)
+        let urls = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource((myDict![String(chooseSongIndex!)]![kAudioFileNameLinePList]!)! as? String, ofType: "mp3")!)
         self.presentMediaPlayerControllerWithURL(urls, options: nil, completion: { (didPlayToEnd, endTime, error) -> Void in
         })
 

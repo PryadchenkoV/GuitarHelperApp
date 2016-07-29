@@ -43,7 +43,7 @@ class LibraryInterfaceController: WKInterfaceController {
         tableLibrery.setNumberOfRows((chordSet?.count)!, withRowType: "LibraryTableList")
         for index in 0...(chordSet?.count)! - 1{
             let row = tableLibrery.rowControllerAtIndex(index) as! LibraryTableList
-            row.lableChordName.setText(chordSet![(chordSet?.startIndex.advancedBy(index))!] as? String)
+            row.lableChordName.setText(chordSet![(chordSet?.startIndex.advancedBy(index))!])
             
         }
     }
@@ -51,7 +51,7 @@ class LibraryInterfaceController: WKInterfaceController {
 
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         
-        self.presentControllerWithName("ChordsPic", context: chordSet![(chordSet?.startIndex.advancedBy(rowIndex))!] as? String )
+        self.presentControllerWithName("ChordsPic", context: chordSet![(chordSet?.startIndex.advancedBy(rowIndex))!] as String )
     }
     
 

@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarHelper WatchKit Extension/MainScreen.swift"
-            timestampString = "490095669.435949"
+            timestampString = "491519888.601999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuitarHelper WatchKit Extension/MainScreen.swift"
-            timestampString = "490114735.911022"
+            timestampString = "491519888.601999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -97,6 +97,54 @@
             endingLineNumber = "22"
             landmarkName = "PlayerController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuitarHelper WatchKit Extension/LibraryInterfaceController.swift"
+            timestampString = "491519126.148366"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "loadList()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GuitarHelper_WatchKit_Extension.LibraryInterfaceController.loadList () -&gt; ()"
+                  moduleName = "GuitarHelper WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/IvanPryadchenko/Develop/GuitarHelperApp/GuitarHelper%20WatchKit%20Extension/LibraryInterfaceController.swift"
+                  timestampString = "491519126.662047"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "8234">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GuitarHelper_WatchKit_Extension.LibraryInterfaceController.loadList () -&gt; ()"
+                  moduleName = "GuitarHelper WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/IvanPryadchenko/Develop/GuitarHelperApp/GuitarHelper%20WatchKit%20Extension/LibraryInterfaceController.swift"
+                  timestampString = "491519126.747788"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "9932">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
