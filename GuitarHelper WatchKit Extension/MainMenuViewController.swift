@@ -15,12 +15,12 @@ class MainMenuViewController: WKInterfaceController {
     @IBOutlet var imageMetro: WKInterfaceImage!
     
     var flagTimer = true
-    var timer = 0
+    var timer = 40
     var beat = NSTimer()
     
     @IBOutlet var lableBeat: WKInterfaceLabel!
-    var imageLeft : UIImage = UIImage(named:"metro_left")!
-    var imageRight : UIImage = UIImage(named:"metro_right")!
+    var imageLeft : UIImage = UIImage(named:"metro_left_without_black")!
+    var imageRight : UIImage = UIImage(named:"metro_right_without_black")!
     
     override func awakeWithContext(context: AnyObject?) {
         
@@ -38,13 +38,13 @@ class MainMenuViewController: WKInterfaceController {
     }
     
     func timerAction() {
+        WKInterfaceDevice.currentDevice().playHaptic(.Click)
         if flagTimer {
             imageMetro.setImage(imageLeft)
-            flagTimer = false
-        }
-        else {
+            flagTimer = !flagTimer
+        } else {
             imageMetro.setImage(imageRight)
-            flagTimer = true
+            flagTimer = !flagTimer
         }
     }
 

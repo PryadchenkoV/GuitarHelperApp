@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Choose song-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Choose song" id="AgC-eL-Hgc" customClass="MainScreen" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="rtB-xd-Rgr">
+                            <items>
+                                <tableRow identifier="MainScreenSongList" id="B6c-Su-rfs" userLabel="Song Row Controller" customClass="MainScreenSongList" customModule="GuitarHelper_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="hX1-fS-Zm7">
+                                        <items>
+                                            <label width="1" alignment="center" text="Song" textAlignment="center" numberOfLines="0" id="0p3-k0-zEH" userLabel="lableSong">
+                                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="17"/>
+                                            </label>
+                                            <label alignment="center" text="Author" textAlignment="center" id="mOS-5H-I8J">
+                                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="0.68375538793103452" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lableAuthorText" destination="mOS-5H-I8J" id="naP-8N-uaJ"/>
+                                        <outlet property="lableSongText" destination="0p3-k0-zEH" id="ro4-un-LBD"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="songTable" destination="rtB-xd-Rgr" id="gBO-R4-ZjW"/>
+                        <segue destination="Jdb-uJ-dpR" kind="relationship" relationship="nextPage" id="n59-76-FSM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-40" y="-275"/>
+        </scene>
+        <!--Metronome-->
+        <scene sceneID="s87-Cw-p6b">
+            <objects>
+                <controller title="Metronome" id="Jdb-uJ-dpR" customClass="MetronomController" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <picker width="1" height="100" alignment="center" verticalAlignment="center" focusStyle="sequence" id="TSr-NI-oiV">
+                            <connections>
+                                <action selector="pickerIndex:" destination="Jdb-uJ-dpR" id="BPG-Iz-hvV"/>
+                            </connections>
+                        </picker>
+                        <button width="1" height="33.5" alignment="center" verticalAlignment="center" title="Start" id="bLN-0K-C9u">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="21"/>
+                            <connections>
+                                <action selector="buttonStartPush" destination="Jdb-uJ-dpR" id="Vz9-BO-zkT"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonStart" destination="bLN-0K-C9u" id="ym3-po-7Z4"/>
+                        <outlet property="pickerSpeed" destination="TSr-NI-oiV" id="m4E-Fd-fNE"/>
+                        <segue destination="nSv-Mw-Sh1" kind="relationship" relationship="nextPage" id="DdA-Yz-PRp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="207" y="-275"/>
+        </scene>
+        <!--Choose-->
+        <scene sceneID="6ld-MY-Uab">
+            <objects>
+                <controller identifier="secView1" title="Choose" id="duB-VX-HJl" customClass="InterfaceController" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="dol-Lk-30F">
+                            <items>
+                                <tableRow identifier="CordsRowController" id="Qse-9d-GdN" customClass="CordsRowControl" customModule="GuitarHelper_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="40" alignment="left" id="kFj-h5-AbG">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="2At-cr-PO3">
+                                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="22"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="myLable" destination="2At-cr-PO3" id="0YA-rA-6X7"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <separator alignment="left" id="vBr-Ru-oPN">
+                            <color key="color" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <button width="1" alignment="center" title="Listen" id="SfP-dd-326">
+                            <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="22"/>
+                            <connections>
+                                <action selector="buttonListenPush" destination="duB-VX-HJl" id="cuS-oy-dN2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonListen" destination="SfP-dd-326" id="PyO-pe-vqO"/>
+                        <outlet property="myTable" destination="dol-Lk-30F" id="zjp-ub-dLr"/>
+                        <segue destination="VpY-x1-z44" kind="relationship" relationship="nextPage" id="v4x-C2-Wh0"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-54" y="54"/>
+        </scene>
+        <!--Metronome-->
+        <scene sceneID="UQE-8d-gmI">
+            <objects>
+                <controller identifier="metronomController" title="Metronome" id="Alt-UI-dou" customClass="MainMenuViewController" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <imageView width="113" height="118" alignment="center" image="metro_right.png" id="rv1-eP-tny"/>
+                        <label alignment="center" text="Label" id="mUi-nd-RNf">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="17"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="imageMetro" destination="rv1-eP-tny" id="YSW-x3-bDa"/>
+                        <outlet property="lableBeat" destination="mUi-nd-RNf" id="Oow-Pz-zfJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="207" y="-594"/>
+        </scene>
+        <!--Chord-->
+        <scene sceneID="AAn-y6-5Va">
+            <objects>
+                <controller identifier="ChordsPic" title="Chord" id="OfE-bq-i6j" customClass="ChordImageInterfaceController" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Am" id="wSa-km-L6c">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="25"/>
+                        </label>
+                        <imageView width="100" height="100" alignment="center" image="Am.png" id="Q8U-GJ-Xo1"/>
+                    </items>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="imageChord" destination="Q8U-GJ-Xo1" id="oM6-gK-sRz"/>
+                        <outlet property="lableLibraryChord" destination="wSa-km-L6c" id="ADZ-z8-bZ5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="492" y="-588"/>
+        </scene>
+        <!--Chords Lib-->
+        <scene sceneID="Ydn-6w-lgR">
+            <objects>
+                <controller identifier="Library" title="Chords Lib" id="nSv-Mw-Sh1" customClass="LibraryInterfaceController" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="43k-50-taC">
+                            <items>
+                                <tableRow identifier="LibraryTableList" id="XtA-wz-CEB" customClass="LibraryTableList" customModule="GuitarHelper_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="ZI1-Aj-Bta">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="sr5-JV-N1o">
+                                                <color key="textColor" red="1" green="0.49803921568627452" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="system" pointSize="22"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lableChordName" destination="sr5-JV-N1o" id="KuB-eG-ACI"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableLibrery" destination="43k-50-taC" id="lLU-xl-hq0"/>
+                        <segue destination="2el-6y-EOr" kind="relationship" relationship="nextPage" id="IGL-si-eh1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="492" y="-275"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="TGF-xW-xFx">
+            <objects>
+                <controller title="About" id="2el-6y-EOr">
+                    <items>
+                        <imageView width="76" height="75" alignment="center" image="guitar-icon_new_app.png" id="Ulo-jp-92C">
+                            <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <label width="136" alignment="left" text="GuitarHelper App Created by Pryadchenko Ivan Danya Vorobyev Alexander Lebedev iOS Track        Summer School HSE 2016" textAlignment="center" numberOfLines="8" id="tle-8i-Zfi">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="imageGroup" destination="Ulo-jp-92C" id="qFQ-PY-6cX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="765" y="-275"/>
+        </scene>
+        <!--Metro On\Off-->
+        <scene sceneID="HOT-kd-83s">
+            <objects>
+                <controller identifier="secView2" title="Metro On\Off" id="VpY-x1-z44" customClass="SecControlMethronome" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <switch width="136" height="43.5" alignment="center" title="Metronome" numberOfLines="1" id="Ck2-2c-8hv">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                            <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="mySwitch:" destination="VpY-x1-z44" id="2SE-jH-VI1"/>
+                            </connections>
+                        </switch>
+                        <picker height="91" alignment="left" alpha="0.0" focusStyle="sequence" id="fuw-nC-4hb">
+                            <connections>
+                                <action selector="pickerAction:" destination="VpY-x1-z44" id="Q4M-58-rNi"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="myPicker" destination="fuw-nC-4hb" id="u0j-wL-2PT"/>
+                        <outlet property="mySwitchOutlet" destination="Ck2-2c-8hv" id="bdm-Ig-MMz"/>
+                        <segue destination="4cn-pC-CvW" kind="relationship" relationship="nextPage" id="WC9-Ad-T2A"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="236" y="54"/>
+        </scene>
+        <!--Chords-->
+        <scene sceneID="KaH-7O-OYh">
+            <objects>
+                <controller identifier="secView3" title="Chords" id="4cn-pC-CvW" customClass="PlayerController" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <label width="61" alignment="center" text="A5" textAlignment="center" id="5so-Gu-cIx">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="boldSystem" pointSize="30"/>
+                        </label>
+                        <button width="100" height="100" alignment="center" backgroundImage="D.png" id="G1j-zw-mdW">
+                            <connections>
+                                <action selector="buttonChordPushed" destination="4cn-pC-CvW" id="Dgd-sD-wof"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <menu key="menu" id="6KK-Ec-Rbf">
+                        <items>
+                            <menuItem title="Previous Chord" icon="repeat" id="94Q-RK-16C">
+                                <connections>
+                                    <action selector="backChordPush" destination="4cn-pC-CvW" id="7NC-wx-ytJ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="buttonChord" destination="G1j-zw-mdW" id="bCD-5v-gQx"/>
+                        <outlet property="lableChord" destination="5so-Gu-cIx" id="vhy-Pd-VUh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="492" y="54"/>
+        </scene>
+        <!--chordsChange1-->
+        <scene sceneID="RQd-Ut-pn7">
+            <objects>
+                <controller identifier="chordsChange1" id="xs5-xe-tCf" customClass="StopWatchPicControl" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="MzY-zh-e83">
+                            <items>
+                                <label width="43.5" height="37.5" alignment="left" text="2" textAlignment="center" id="2Bm-XW-2Td">
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="23"/>
+                                </label>
+                                <imageView width="40" height="40" alignment="right" image="A5.png" id="R57-gx-eD9"/>
+                            </items>
+                        </group>
+                        <imageView width="105" height="105" alignment="center" verticalAlignment="center" image="D.png" id="cEq-ww-J8M"/>
+                    </items>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="imgCurChord" destination="cEq-ww-J8M" id="kea-XA-OSy"/>
+                        <outlet property="imgNextChord" destination="R57-gx-eD9" id="5cI-AM-ytz"/>
+                        <outlet property="lableCountDown" destination="2Bm-XW-2Td" id="MPj-l1-C7x"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-54" y="668"/>
+        </scene>
+        <!--chordsChange0-->
+        <scene sceneID="a9J-fj-3Hg">
+            <objects>
+                <controller identifier="chordsChange0" id="mEZ-oU-eMa" customClass="StopWatchControl" customModule="GuitarHelper_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="bottom" text="5" textAlignment="left" id="fD9-Ih-SSG">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="23"/>
+                        </label>
+                        <label height="33.5" alignment="right" text="G" id="dJZ-C9-mXb">
+                            <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="thin" pointSize="28"/>
+                        </label>
+                        <label width="136" height="73.5" alignment="center" verticalAlignment="center" text="Am" textAlignment="center" baselineAdjustment="alignCenters" id="0Fg-Z7-MTb">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="heavy" pointSize="86"/>
+                        </label>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="lableCountDown" destination="fD9-Ih-SSG" id="Sd6-7A-CiI"/>
+                        <outlet property="lableCurrentAcc" destination="0Fg-Z7-MTb" id="81P-o1-RFC"/>
+                        <outlet property="lableNextAcc" destination="dJZ-C9-mXb" id="tft-yT-2Vp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-54" y="393"/>
+        </scene>
+    </scenes>
+</document>

@@ -43,7 +43,7 @@ class MetronomController: WKInterfaceController {
     }
     
     @IBAction func pickerIndex(value: Int) {
-        if value > 0 {
+        if value >= 0 {
             indexPicker = value + kPickerFirstValue
         }
         else {
@@ -53,6 +53,9 @@ class MetronomController: WKInterfaceController {
 
     
     @IBAction func buttonStartPush() {
+        if indexPicker == 0 {
+            indexPicker += kPickerFirstValue
+        }
         self.presentControllerWithName("metronomController", context: indexPicker)
 
         

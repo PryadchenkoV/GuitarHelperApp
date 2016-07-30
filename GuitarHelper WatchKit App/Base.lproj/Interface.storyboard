@@ -51,7 +51,7 @@
                                 <action selector="pickerIndex:" destination="Jdb-uJ-dpR" id="BPG-Iz-hvV"/>
                             </connections>
                         </picker>
-                        <button width="1" height="33.5" alignment="center" verticalAlignment="center" title="Start/Stop" id="bLN-0K-C9u">
+                        <button width="1" height="33.5" alignment="center" verticalAlignment="center" title="Start" id="bLN-0K-C9u">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="system" pointSize="21"/>
@@ -174,7 +174,7 @@
                         </table>
                     </items>
                     <connections>
-                        <outlet property="tableLibrery" destination="43k-50-taC" id="lLU-xl-hq0"/>
+                        <outlet property="tableLibrary" destination="43k-50-taC" id="jmx-RP-WnO"/>
                         <segue destination="2el-6y-EOr" kind="relationship" relationship="nextPage" id="IGL-si-eh1"/>
                     </connections>
                 </controller>

@@ -12,11 +12,11 @@ import Foundation
 
 class LibraryInterfaceController: WKInterfaceController {
 
-    var chordSet: Set<String>?
+    var chordSet: [String]?
     var bufArr:[String] = []
 
     
-    @IBOutlet var tableLibrery: WKInterfaceTable!
+    @IBOutlet var tableLibrary: WKInterfaceTable!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -34,16 +34,14 @@ class LibraryInterfaceController: WKInterfaceController {
                 bufArr.append(chordValue)
             }
         }
-        chordSet = Set(bufArr)
-        print(chordSet!)
-        print((chordSet?.count)!)
-        
-        
-        
-        tableLibrery.setNumberOfRows((chordSet?.count)!, withRowType: "LibraryTableList")
+        chordSet = Set(bufArr).sort()
+//        print(chordSet!.sort())
+//        print((chordSet?.count)!)
+        tableLibrary.setNumberOfRows((
+            chordSet!.count), withRowType: "LibraryTableList")
         for index in 0...(chordSet?.count)! - 1{
-            let row = tableLibrery.rowControllerAtIndex(index) as! LibraryTableList
-            row.lableChordName.setText(chordSet![(chordSet?.startIndex.advancedBy(index))!])
+            let row = tableLibrary.rowControllerAtIndex(index) as! LibraryTableList
+            row.lableChordName.setText(chordSet![index])
             
         }
     }
