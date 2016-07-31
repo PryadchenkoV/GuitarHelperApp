@@ -73,7 +73,6 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func buttonListenPush() {
         
-        //let urls = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(nameS[chooseSongIndex!], ofType: "mp3")!)
         let urls = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource((myDict![String(chooseSongIndex!)]![kAudioFileNameLinePList]!)! as? String, ofType: "mp3")!)
         self.presentMediaPlayerControllerWithURL(urls, options: nil, completion: { (didPlayToEnd, endTime, error) -> Void in
         })

@@ -25,6 +25,7 @@ class MainMenuViewController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         
         super.awakeWithContext(context)
+        
         if let value = context as? Int {
             timer = value
         }
