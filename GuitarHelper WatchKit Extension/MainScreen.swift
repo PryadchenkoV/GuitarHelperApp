@@ -24,11 +24,18 @@ class MainScreen: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if !defaults.boolForKey("firstview") {
+            defaults.setBool(true, forKey: "firstview")
+            self.presentControllerWithName("FirstTimeController", context: nil)
+        }
         let path = NSBundle.mainBundle().pathForResource(kNameOfPList, ofType: "plist")
         myDict = NSDictionary(contentsOfFile: path!)
+        
         loadList()
-        //print(myDict!["0"]!["ChordList"]!!["1"]!!["Chord"]!!)
-        // Configure interface objects here.
+
     }
     
     func loadList()  {
@@ -46,6 +53,7 @@ class MainScreen: WKInterfaceController {
         self.presentControllerWithNames(arrView, contexts: [rowIndex])
     }
     
-    
+
 }
+
 

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0416CF2D1D50E14300394274 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0416CF2B1D50E14300394274 /* Icon-App-60x60@2x.png */; };
+		0416CF2E1D50E14300394274 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0416CF2C1D50E14300394274 /* Icon-App-60x60@3x.png */; };
 		045219E71D33BAD100CDFBC9 /* CordsRowControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045219E61D33BAD100CDFBC9 /* CordsRowControl.swift */; };
+		04E9BCE41D4FB72E009DFBDD /* FirstTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9BCE31D4FB72E009DFBDD /* FirstTimeInterfaceController.swift */; };
 		E2292F701D33D7A600D06648 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2292F6F1D33D7A600D06648 /* MainScreen.swift */; };
 		E2292F721D33D9C500D06648 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2292F711D33D9C500D06648 /* InterfaceController.swift */; };
 		E2292F741D33DC5D00D06648 /* MetronomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2292F731D33DC5D00D06648 /* MetronomController.swift */; };
@@ -112,7 +115,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0416CF2B1D50E14300394274 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		0416CF2C1D50E14300394274 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		045219E61D33BAD100CDFBC9 /* CordsRowControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CordsRowControl.swift; sourceTree = "<group>"; };
+		04E9BCE31D4FB72E009DFBDD /* FirstTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTimeInterfaceController.swift; sourceTree = "<group>"; };
 		E2292F6F1D33D7A600D06648 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E2292F711D33D9C500D06648 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		E2292F731D33DC5D00D06648 /* MetronomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomController.swift; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 				E22C95111D369B39000428E4 /* LibraryInterfaceController.swift */,
 				E22C95131D369BB8000428E4 /* LibraryTableList.swift */,
 				E22C95151D36B47C000428E4 /* ChordImageInterfaceController.swift */,
+				04E9BCE31D4FB72E009DFBDD /* FirstTimeInterfaceController.swift */,
 			);
 			name = firstRow;
 			sourceTree = "<group>";
@@ -304,6 +311,8 @@
 		E24CBEDE1D33AE50008EC25B /* GuitarHelper */ = {
 			isa = PBXGroup;
 			children = (
+				0416CF2B1D50E14300394274 /* Icon-App-60x60@2x.png */,
+				0416CF2C1D50E14300394274 /* Icon-App-60x60@3x.png */,
 				E24CBEDF1D33AE50008EC25B /* AppDelegate.swift */,
 				E24CBEE11D33AE50008EC25B /* ViewController.swift */,
 				E24CBEE31D33AE50008EC25B /* Main.storyboard */,
@@ -452,7 +461,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24CBEEA1D33AE50008EC25B /* LaunchScreen.storyboard in Resources */,
+				0416CF2E1D50E14300394274 /* Icon-App-60x60@3x.png in Resources */,
 				E24CBEE71D33AE50008EC25B /* Assets.xcassets in Resources */,
+				0416CF2D1D50E14300394274 /* Icon-App-60x60@2x.png in Resources */,
 				E24CBEE51D33AE50008EC25B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +540,7 @@
 				E2292F701D33D7A600D06648 /* MainScreen.swift in Sources */,
 				E22C95141D369BB8000428E4 /* LibraryTableList.swift in Sources */,
 				E22C95161D36B47C000428E4 /* ChordImageInterfaceController.swift in Sources */,
+				04E9BCE41D4FB72E009DFBDD /* FirstTimeInterfaceController.swift in Sources */,
 				E232F0D51D3557F900F864CC /* PlayerController.swift in Sources */,
 				E2292F721D33D9C500D06648 /* InterfaceController.swift in Sources */,
 				E232F0F01D35930700F864CC /* StopWatchPicControl.swift in Sources */,

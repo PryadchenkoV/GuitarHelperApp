@@ -9,13 +9,18 @@
 import WatchKit
 import Foundation
 
-
+let names = ["ChooseSong","Metronome","Library","About"]
 class FirstTimeInterfaceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+    }
+    
+    
+    @IBAction func buttonPressed() {
+        self.presentControllerWithNames(names, contexts: nil)
     }
 
     override func willActivate() {
