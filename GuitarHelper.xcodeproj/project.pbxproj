@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0416CF2D1D50E14300394274 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0416CF2B1D50E14300394274 /* Icon-App-60x60@2x.png */; };
-		0416CF2E1D50E14300394274 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0416CF2C1D50E14300394274 /* Icon-App-60x60@3x.png */; };
 		045219E71D33BAD100CDFBC9 /* CordsRowControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045219E61D33BAD100CDFBC9 /* CordsRowControl.swift */; };
 		04E9BCE41D4FB72E009DFBDD /* FirstTimeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9BCE31D4FB72E009DFBDD /* FirstTimeInterfaceController.swift */; };
 		E2292F701D33D7A600D06648 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2292F6F1D33D7A600D06648 /* MainScreen.swift */; };
@@ -69,6 +67,8 @@
 		E2631EDB1D4C1F850066936C /* metro_right_without_black.png in Resources */ = {isa = PBXBuildFile; fileRef = E2631ED91D4C1F850066936C /* metro_right_without_black.png */; };
 		E28416081D33F81F0021BC4E /* beep.m4a in Resources */ = {isa = PBXBuildFile; fileRef = E28416071D33F81F0021BC4E /* beep.m4a */; };
 		E284160A1D3420EA0021BC4E /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28416091D3420EA0021BC4E /* MainMenuViewController.swift */; };
+		E2A114CF1D525CDE007E09FD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A114CE1D525CDE007E09FD /* SettingsViewController.swift */; };
+		E2A114D31D525F29007E09FD /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A114D21D525F29007E09FD /* SettingsTableViewCell.swift */; };
 		E2AB7C731D367CFB001D9F3A /* metal.png in Resources */ = {isa = PBXBuildFile; fileRef = E2AB7C721D367CFB001D9F3A /* metal.png */; };
 /* End PBXBuildFile section */
 
@@ -115,8 +115,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0416CF2B1D50E14300394274 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
-		0416CF2C1D50E14300394274 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		045219E61D33BAD100CDFBC9 /* CordsRowControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CordsRowControl.swift; sourceTree = "<group>"; };
 		04E9BCE31D4FB72E009DFBDD /* FirstTimeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTimeInterfaceController.swift; sourceTree = "<group>"; };
 		E2292F6F1D33D7A600D06648 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -181,6 +179,8 @@
 		E2631ED91D4C1F850066936C /* metro_right_without_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metro_right_without_black.png; sourceTree = "<group>"; };
 		E28416071D33F81F0021BC4E /* beep.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = beep.m4a; sourceTree = "<group>"; };
 		E28416091D3420EA0021BC4E /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		E2A114CE1D525CDE007E09FD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E2A114D21D525F29007E09FD /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		E2AB7C721D367CFB001D9F3A /* metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metal.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,6 +291,7 @@
 		E24CBED31D33AE50008EC25B = {
 			isa = PBXGroup;
 			children = (
+				E2A114D21D525F29007E09FD /* SettingsTableViewCell.swift */,
 				E24CBEDE1D33AE50008EC25B /* GuitarHelper */,
 				E24CBEF21D33AE50008EC25B /* GuitarHelper WatchKit App */,
 				E24CBF011D33AE50008EC25B /* GuitarHelper WatchKit Extension */,
@@ -311,10 +312,9 @@
 		E24CBEDE1D33AE50008EC25B /* GuitarHelper */ = {
 			isa = PBXGroup;
 			children = (
-				0416CF2B1D50E14300394274 /* Icon-App-60x60@2x.png */,
-				0416CF2C1D50E14300394274 /* Icon-App-60x60@3x.png */,
 				E24CBEDF1D33AE50008EC25B /* AppDelegate.swift */,
 				E24CBEE11D33AE50008EC25B /* ViewController.swift */,
+				E2A114CE1D525CDE007E09FD /* SettingsViewController.swift */,
 				E24CBEE31D33AE50008EC25B /* Main.storyboard */,
 				E24CBEE61D33AE50008EC25B /* Assets.xcassets */,
 				E24CBEE81D33AE50008EC25B /* LaunchScreen.storyboard */,
@@ -461,9 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24CBEEA1D33AE50008EC25B /* LaunchScreen.storyboard in Resources */,
-				0416CF2E1D50E14300394274 /* Icon-App-60x60@3x.png in Resources */,
 				E24CBEE71D33AE50008EC25B /* Assets.xcassets in Resources */,
-				0416CF2D1D50E14300394274 /* Icon-App-60x60@2x.png in Resources */,
 				E24CBEE51D33AE50008EC25B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +528,8 @@
 			files = (
 				E24CBEE21D33AE50008EC25B /* ViewController.swift in Sources */,
 				E24CBEE01D33AE50008EC25B /* AppDelegate.swift in Sources */,
+				E2A114D31D525F29007E09FD /* SettingsTableViewCell.swift in Sources */,
+				E2A114CF1D525CDE007E09FD /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

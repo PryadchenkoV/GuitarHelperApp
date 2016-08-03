@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         calComp.minute = 0
         calComp.second = 0
         calendar.timeZone = NSTimeZone.defaultTimeZone()
-        var dataForce = calendar.dateFromComponents(calComp)
+        let dataForce = calendar.dateFromComponents(calComp)
         
         let notification = UILocalNotification()
         notification.alertTitle = "Came on!"

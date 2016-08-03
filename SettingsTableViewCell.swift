@@ -6,8 +6,10 @@
 //  Copyright © 2016 Ivan Pryadchenko. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var lableName: UILabel!
 
 }
